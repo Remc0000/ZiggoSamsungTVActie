@@ -1,0 +1,12 @@
+name: samsung-tv-monitor
+
+infra:
+  provider: bicep
+  path: infra
+
+hooks:
+  postdeploy:
+    shell: pwsh
+    run: ./scripts/deploy-image.ps1
+    interactive: false
+    continueOnError: false

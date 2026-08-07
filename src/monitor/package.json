@@ -1,0 +1,27 @@
+{
+  "name": "samsung-tv-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run tests",
+    "login": "npm run build && node dist/src/login.js",
+    "upload-session": "npm run build && node dist/src/uploadSession.js"
+  },
+  "dependencies": {
+    "@azure/identity": "4.13.1",
+    "@azure/storage-blob": "12.33.0",
+    "applicationinsights": "3.15.1",
+    "playwright": "1.62.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  }
+}
